@@ -1,0 +1,66 @@
+/* Dark mode date */
+#dark .timeline-date-dark {
+  color: #fff !important;
+}
+
+/* Education container */
+.education {
+  padding: 80px 20px;
+  margin: 50px auto;
+  max-width: 1000px;
+  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 12px;
+}
+
+.education hr {
+  color: #138781;
+  width: 400px;
+  margin: 10px auto 30px auto;
+  border-top: 2px solid #138781;
+}
+
+.education h2 {
+  font-weight: 700;
+  color: #138781;
+}
+
+.vertical-timeline-element-title {
+  color: #138781;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.vertical-timeline-element-subtitle1 {
+  color: #1e1e2c;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.vertical-timeline-element-subtitle2 {
+  color: #eb4512;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Dark Mode */
+#dark .education {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .education {
+    padding: 50px 15px;
+    margin: 30px auto;
+  }
+
+  .education hr {
+    width: 280px;
+  }
+
+  .vertical-timeline-element-title,
+  .vertical-timeline-element-subtitle1,
+  .vertical-timeline-element-subtitle2 {
+    text-align: center;
+  }
+}

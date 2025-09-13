@@ -1,0 +1,54 @@
+.techstack {
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.techstack hr {
+  color: #138781;
+  width: 400px;
+  margin: 10px auto;
+}
+
+.techstack h2 {
+  font-weight: bold;
+  color: #138781;
+}
+
+.techstack p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.techstack .card {
+  cursor: pointer;
+}
+
+.techstack .tech-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.techstack .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #138781;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* =============== Mobile =============== */
+@media (max-width: 600px) {
+  .techstack {
+    margin: 40px 0;
+    padding: 10px;
+  }
+
+  .techstack hr {
+    width: 280px;
+  }
+
+  .techstack h2 {
+    font-size: 22px;
+  }
+}
