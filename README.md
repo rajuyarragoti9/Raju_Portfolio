@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Raju Yarragoti — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website built with the MERN stack (React frontend + Node/Express backend).
+It showcases my work experience, tech stack, projects and education, and includes a contact form that emails me directly.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Single-page layout** with smooth scrolling between sections (Home, About, Work Experience, Tech Stack, Projects, Education, Contact)
+- **Light / dark theme** toggle
+- **Responsive design** with a dedicated mobile navigation menu
+- **Animations** with Framer Motion — sections animate as they scroll into view
+- **Typewriter effect** on the hero section
+- **Downloadable resume** and WhatsApp "Hire Me" button
+- **Contact form** that sends emails via Nodemailer (Gmail), with:
+  - Server-side validation and HTML escaping
+  - Rate limiting (5 messages per 15 minutes per IP)
+  - Loading state to prevent duplicate submissions
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Layer    | Technologies |
+| -------- | ------------ |
+| Frontend | React 18, Bootstrap 5, Framer Motion, React Scroll, React Icons, React Toastify, React Vertical Timeline, Axios |
+| Backend  | Node.js, Express, Nodemailer, express-rate-limit, dotenv |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+pro/
+├── server.js                 # Express server (API + serves React build)
+├── routes/portfolioRoute.js  # POST /api/v1/portfolio/sendEmail
+├── controllers/              # Email sending logic
+└── client/                   # React app (this folder)
+    ├── public/
+    └── src/
+        ├── components/       # Navbar, MobileNav, Layout
+        ├── pages/            # Home, About, WorkExp, Techstack, Projects, Education, Contact
+        ├── context/          # Theme context (light/dark)
+        ├── utils/            # Tech stack data
+        └── assets/           # Images and resume
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js 18+
+- A Gmail account with an [App Password](https://support.google.com/accounts/answer/185833) for sending emails
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# in the root folder (server)
+npm install
 
-### `npm run eject`
+# in the client folder
+cd client
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Configure environment variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a `.env` file in the **root** folder:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+PORT=8001
+EMAIL_USER=your-gmail@gmail.com
+EMAIL_PASS=your-gmail-app-password
+DEST_EMAIL=where-messages-should-go@gmail.com
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a `.env` file in the **client** folder:
 
-## Learn More
+```env
+REACT_APP_API_URL=/api/v1/portfolio
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Run in development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# terminal 1 — root folder: start the API on port 8001
+npm start
 
-### Code Splitting
+# terminal 2 — client folder: start React on port 3000 (proxies /api to 8001)
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Open http://localhost:3000
 
-### Analyzing the Bundle Size
+### 4. Run in production mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd client
+npm run build      # outputs to client/build
+cd ..
+node server.js     # serves the build and the API on http://localhost:8001
+```
 
-### Making a Progressive Web App
+## API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`POST /api/v1/portfolio/sendEmail`
 
-### Advanced Configuration
+```json
+{ "name": "John", "email": "john@example.com", "msg": "Hello!" }
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Status | Meaning |
+| ------ | ------- |
+| 200    | Email sent |
+| 400    | Missing fields, invalid email, or input too long |
+| 429    | Too many requests — try again later |
+| 500    | Email could not be sent |
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [rajuyarragoti9](https://github.com/rajuyarragoti9)
+- LinkedIn: [Raju Yarragoti](https://www.linkedin.com/in/raju-yarragoti-4a655315a/)
+- Email: rajuyarragoti@gmail.com

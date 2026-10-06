@@ -13,6 +13,9 @@
   align-items: center;
   background-color: #1e1e1e;
   padding: 10px 20px;
+  height: 56px;
+  position: relative;
+  z-index: 1; /* keep header (and close button) above the open menu */
 }
 
 .mobile-nav-title {
@@ -22,6 +25,10 @@
 }
 
 .mobile-nav-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
   color: white;
   cursor: pointer;
 }
@@ -69,5 +76,12 @@
 @media (min-width: 769px) {
   .mobile-nav-wrapper {
     display: none;
+  }
+}
+
+/* Fixed header covers the top of the page, so push content down */
+@media (max-width: 768px) {
+  body {
+    padding-top: 56px;
   }
 }

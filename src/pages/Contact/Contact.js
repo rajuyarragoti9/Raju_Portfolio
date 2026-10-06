@@ -15,16 +15,19 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+  const [sending, setSending] = useState(false);
 
-  // handle submit button
+  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      if (!name || !email || !msg) {
-        toast.error("Please provide all fields");
-        return;
-      }
+    if (sending) return;
+    if (!name.trim() || !email.trim() || !msg.trim()) {
+      toast.error("Please provide all fields");
+      return;
+    }
 
+    setSending(true);
+    try {
       const res = await axios.post(
         `${process.env.REACT_APP_API_URL}/sendEmail`,
         { name, email, msg }
@@ -40,7 +43,13 @@ const Contact = () => {
       }
     } catch (error) {
       console.error("Contact form error:", error);
-      toast.error("Something went wrong. Please try again.");
+      // Show server validation / rate-limit messages when available
+      toast.error(
+        error.response?.data?.message ||
+          "Something went wrong. Please try again."
+      );
+    } finally {
+      setSending(false);
     }
   };
 
@@ -57,7 +66,8 @@ const Contact = () => {
                   alt="contact"
                   className="image"
                   initial={{ opacity: 0, x: -100 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 />
               </div>
@@ -68,7 +78,8 @@ const Contact = () => {
           <div className="col-lg-6 col-md-6">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="card2 d-flex card border-0 px-4 py-5"
             >
@@ -118,40 +129,50 @@ const Contact = () => {
                   <div className="line" />
                 </div>
 
-                <div className="row px-3 mb-3">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter your Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
-                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="row px-3 mb-3">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your Name"
+                      aria-label="Your name"
+                      maxLength={100}
+                      required
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </div>
 
-                <div className="row px-3 mb-3">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter Your Email Address"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
+                  <div className="row px-3 mb-3">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter Your Email Address"
+                      aria-label="Your email address"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </div>
 
-                <div className="row px-3 mb-3">
-                  <textarea
-                    name="msg"
-                    placeholder="Write your message"
-                    value={msg}
-                    onChange={(e) => setMsg(e.target.value)}
-                  />
-                </div>
+                  <div className="row px-3 mb-3">
+                    <textarea
+                      name="msg"
+                      placeholder="Write your message"
+                      aria-label="Your message"
+                      maxLength={5000}
+                      required
+                      value={msg}
+                      onChange={(e) => setMsg(e.target.value)}
+                    />
+                  </div>
 
-                <div className="row px-3">
-                  <button className="button" onClick={handleSubmit}>
-                    SEND MESSAGE
-                  </button>
-                </div>
+                  <div className="row px-3">
+                    <button type="submit" className="button" disabled={sending}>
+                      {sending ? "SENDING..." : "SEND MESSAGE"}
+                    </button>
+                  </div>
+                </form>
               </div>
             </motion.div>
           </div>

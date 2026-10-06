@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1e2c"/><stop offset="1" stop-color="#2b2b40"/></linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.06"/></pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <!-- browser window -->
+  <rect x="150" y="80" width="900" height="520" rx="18" fill="#ffffff"/>
+  <path d="M150 98a18 18 0 0 1 18-18h864a18 18 0 0 1 18 18v32H150z" fill="#ececf2"/>
+  <circle cx="182" cy="105" r="8" fill="#ff5f57"/><circle cx="208" cy="105" r="8" fill="#febc2e"/><circle cx="234" cy="105" r="8" fill="#28c840"/>
+  <rect x="300" y="94" width="600" height="22" rx="11" fill="#ffffff"/>
+  <!-- header -->
+  <text x="190" y="180" font-size="30" font-weight="700" fill="#138781">FreshMart</text>
+  <rect x="420" y="155" width="360" height="36" rx="18" fill="#f2f2f6"/>
+  <circle cx="445" cy="173" r="8" fill="none" stroke="#9a9ab0" stroke-width="3"/><path d="M451 179l7 7" stroke="#9a9ab0" stroke-width="3" stroke-linecap="round"/>
+  <text x="465" y="179" font-size="16" fill="#9a9ab0">Search groceries...</text>
+  <!-- cart -->
+  <g transform="translate(940 150)">
+    <path d="M0 6h12l10 34h34l8-24H18" fill="none" stroke="#1e1e2c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="26" cy="50" r="5" fill="#1e1e2c"/><circle cx="52" cy="50" r="5" fill="#1e1e2c"/>
+    <circle cx="62" cy="2" r="13" fill="#f29f67"/><text x="62" y="8" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+  </g>
+  <!-- apples -->
+  <rect x="190" y="225" width="190" height="320" rx="14" fill="#f7f7fa"/>
+  <circle cx="285" cy="320" r="55" fill="#e74c3c"/>
+  <path d="M285 268c4-14 14-22 26-24-2 12-12 22-26 24z" fill="#27ae60"/>
+  <path d="M285 268v-12" stroke="#6b3e26" stroke-width="5" stroke-linecap="round"/>
+  <text x="210" y="420" font-size="22" font-weight="600" fill="#1e1e2c">Apples</text>
+  <text x="210" y="450" font-size="18" fill="#7a7a90">1 kg</text>
+  <text x="210" y="505" font-size="24" font-weight="700" fill="#138781">&#8377;120</text>
+  <rect x="310" y="480" width="50" height="40" rx="10" fill="#f29f67"/><path d="M335 490v20M325 500h20" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <!-- carrots -->
+  <rect x="405" y="225" width="190" height="320" rx="14" fill="#f7f7fa"/>
+  <path d="M468 268c10-10 34-10 44 0 4 4 4 12 2 20l-30 105c-2 6-8 6-10 0l-12-108c-1-8 1-13 6-17z" fill="#e67e22"/>
+  <path d="M478 300h14M482 330h10M470 315h8" stroke="#c0601a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M490 266c-4-18-14-28-26-32M490 266c0-20 4-32 12-40M490 266c8-14 20-20 32-20" stroke="#27ae60" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <text x="425" y="420" font-size="22" font-weight="600" fill="#1e1e2c">Carrots</text>
+  <text x="425" y="450" font-size="18" fill="#7a7a90">500 g</text>
+  <text x="425" y="505" font-size="24" font-weight="700" fill="#138781">&#8377;45</text>
+  <rect x="525" y="480" width="50" height="40" rx="10" fill="#f29f67"/><path d="M550 490v20M540 500h20" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <!-- milk -->
+  <rect x="620" y="225" width="190" height="320" rx="14" fill="#f7f7fa"/>
+  <rect x="680" y="262" width="70" height="120" rx="12" fill="#ffffff" stroke="#3498db" stroke-width="5"/>
+  <rect x="695" y="245" width="40" height="22" rx="4" fill="#3498db"/>
+  <rect x="683" y="310" width="64" height="36" fill="#3498db" opacity="0.25"/>
+  <text x="640" y="420" font-size="22" font-weight="600" fill="#1e1e2c">Milk</text>
+  <text x="640" y="450" font-size="18" fill="#7a7a90">1 L</text>
+  <text x="640" y="505" font-size="24" font-weight="700" fill="#138781">&#8377;60</text>
+  <rect x="740" y="480" width="50" height="40" rx="10" fill="#f29f67"/><path d="M765 490v20M755 500h20" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  <!-- cart summary -->
+  <rect x="835" y="225" width="175" height="320" rx="14" fill="#138781"/>
+  <text x="855" y="275" font-size="22" font-weight="700" fill="#fff">Your Cart</text>
+  <rect x="855" y="295" width="135" height="10" rx="5" fill="#ffffff" opacity="0.35"/>
+  <rect x="855" y="320" width="110" height="10" rx="5" fill="#ffffff" opacity="0.35"/>
+  <rect x="855" y="345" width="125" height="10" rx="5" fill="#ffffff" opacity="0.35"/>
+  <text x="855" y="410" font-size="18" fill="#d6f0ee">Total</text>
+  <text x="855" y="445" font-size="30" font-weight="700" fill="#fff">&#8377;225</text>
+  <rect x="855" y="480" width="135" height="40" rx="10" fill="#f29f67"/>
+  <text x="922" y="507" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">Checkout</text>
+</svg>

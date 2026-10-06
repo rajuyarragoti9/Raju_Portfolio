@@ -3,10 +3,12 @@ import "./Projects.css";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
-import IMS from "../../assets/Ims.jpg";
-import Contact from "../../assets/Contact.png";
-import Multer from "../../assets/multer.png";
-import Fashion from "../../assets/fashion.png";
+import GroceryImg from "../../assets/projects/grocery.svg";
+import RideShareImg from "../../assets/projects/rideshare.svg";
+import InventoryImg from "../../assets/projects/inventory.svg";
+import ContactsImg from "../../assets/projects/contacts.svg";
+import FileUploadImg from "../../assets/projects/fileupload.svg";
+import FashionImg from "../../assets/projects/fashion.svg";
 
 const Projects = () => {
   const projectVariants = {
@@ -14,7 +16,7 @@ const Projects = () => {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.2, duration: 0.8 },
+      transition: { delay: (i % 3) * 0.2, duration: 0.8 },
     }),
   };
 
@@ -33,12 +35,13 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={0}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
             <img
-              src="https://unctad.org/sites/default/files/2021-03/2021-03-15_eCommerceCOVID19report-1-1220x675px.jpg"
+              src={GroceryImg}
               alt="Online Grocery Store"
               className="card-img-top"
             />
@@ -78,13 +81,14 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={1}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
             <img
-              src="https://m-rides.com/ca/wp-content/uploads/2022/12/ride-share-app.jpg"
-              alt="Ride-Share-App"
+              src={RideShareImg}
+              alt="Ride sharing app"
               className="card-img-top"
             />
             <div className="card-body text-center">
@@ -113,11 +117,12 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={2}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
-            <img src={IMS} alt="IMS" className="card-img-top" />
+            <img src={InventoryImg} alt="Inventory Management System" className="card-img-top" />
             <div className="card-body text-center">
               <h5 className="card-title text-uppercase">
                 Inventory Management System (IMS) - Internship
@@ -135,11 +140,12 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={3}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
-            <img src={Contact} alt="Contact" className="card-img-top" />
+            <img src={ContactsImg} alt="React Contact Manager app" className="card-img-top" />
             <div className="card-body text-center">
               <h5 className="card-title text-uppercase">
                 ReactJs-Simple-Contact-app
@@ -175,11 +181,12 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={4}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
-            <img src={Multer} alt="Multer" className="card-img-top" />
+            <img src={FileUploadImg} alt="Multer file upload" className="card-img-top" />
             <div className="card-body text-center">
               <h5 className="card-title text-uppercase">
                 Multer-FileUpload-Nodejs
@@ -207,11 +214,12 @@ const Projects = () => {
           className="col-md-4 mb-4"
           custom={5}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
           variants={projectVariants}
         >
           <div className="card shadow-sm h-100">
-            <img src={Fashion} alt="Fashion" className="card-img-top" />
+            <img src={FashionImg} alt="Fashion shopping backend API" className="card-img-top" />
             <div className="card-body text-center">
               <h5 className="card-title text-uppercase">
                 Fashion-Shopping-Backend-App

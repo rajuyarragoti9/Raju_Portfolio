@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1e2c"/><stop offset="1" stop-color="#2b2b40"/></linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.06"/></pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <!-- dashboard -->
+  <rect x="100" y="70" width="1000" height="535" rx="18" fill="#ffffff"/>
+  <!-- sidebar -->
+  <path d="M100 88a18 18 0 0 1 18-18h162v535H118a18 18 0 0 1-18-18z" fill="#1e1e2c"/>
+  <text x="125" y="122" font-size="24" font-weight="700" fill="#f29f67">IMS</text>
+  <rect x="120" y="155" width="140" height="38" rx="8" fill="#138781"/>
+  <text x="135" y="180" font-size="16" fill="#fff">Dashboard</text>
+  <text x="135" y="232" font-size="16" fill="#b8b8c8">Products</text>
+  <text x="135" y="277" font-size="16" fill="#b8b8c8">Orders</text>
+  <text x="135" y="322" font-size="16" fill="#b8b8c8">Suppliers</text>
+  <text x="135" y="367" font-size="16" fill="#b8b8c8">Reports</text>
+  <!-- stat tiles -->
+  <rect x="310" y="100" width="245" height="105" rx="14" fill="#f4f4f8"/>
+  <text x="330" y="135" font-size="16" fill="#7a7a90">Total Products</text>
+  <text x="330" y="180" font-size="36" font-weight="700" fill="#1e1e2c">1,248</text>
+  <rect x="575" y="100" width="245" height="105" rx="14" fill="#f4f4f8"/>
+  <text x="595" y="135" font-size="16" fill="#7a7a90">Orders Today</text>
+  <text x="595" y="180" font-size="36" font-weight="700" fill="#138781">86</text>
+  <rect x="840" y="100" width="235" height="105" rx="14" fill="#fdeee4"/>
+  <text x="860" y="135" font-size="16" fill="#b5652f">Low Stock</text>
+  <text x="860" y="180" font-size="36" font-weight="700" fill="#e07b39">12</text>
+  <!-- bar chart -->
+  <rect x="310" y="230" width="430" height="350" rx="14" fill="#f4f4f8"/>
+  <text x="330" y="265" font-size="18" font-weight="600" fill="#1e1e2c">Stock Levels</text>
+  <path d="M340 540h370" stroke="#d4d4de" stroke-width="2"/>
+  <rect x="355" y="400" width="40" height="140" rx="6" fill="#138781"/>
+  <rect x="415" y="340" width="40" height="200" rx="6" fill="#138781"/>
+  <rect x="475" y="450" width="40" height="90" rx="6" fill="#f29f67"/>
+  <rect x="535" y="310" width="40" height="230" rx="6" fill="#138781"/>
+  <rect x="595" y="370" width="40" height="170" rx="6" fill="#138781"/>
+  <rect x="655" y="480" width="40" height="60" rx="6" fill="#f29f67"/>
+  <!-- boxes -->
+  <g transform="translate(790 250)">
+    <rect x="0" y="0" width="285" height="330" rx="14" fill="#f4f4f8"/>
+    <text x="20" y="35" font-size="18" font-weight="600" fill="#1e1e2c">Warehouse</text>
+    <g fill="#d9a066" stroke="#a8743f" stroke-width="3">
+      <rect x="40" y="210" width="95" height="85" rx="4"/>
+      <rect x="145" y="210" width="95" height="85" rx="4"/>
+      <rect x="92" y="118" width="95" height="85" rx="4"/>
+    </g>
+    <g stroke="#a8743f" stroke-width="3">
+      <path d="M87 210v30M192 210v30M139 118v30"/>
+    </g>
+    <rect x="62" y="255" width="50" height="22" rx="3" fill="#fff"/>
+    <rect x="167" y="255" width="50" height="22" rx="3" fill="#fff"/>
+    <rect x="114" y="163" width="50" height="22" rx="3" fill="#fff"/>
+    <circle cx="240" cy="80" r="26" fill="#138781"/>
+    <path d="M228 80l9 9 16-18" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

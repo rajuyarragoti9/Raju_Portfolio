@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { Link, scroller } from "react-scroll";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./MobileNav.css";
 
+// Same order as the sections appear on the page
 const menuItems = [
   { to: "home", label: "Home" },
   { to: "about", label: "About" },
   { to: "work", label: "Work Experience" },
   { to: "techstack", label: "Tech Stack" },
-  { to: "education", label: "Education" },
   { to: "projects", label: "Projects" },
+  { to: "education", label: "Education" },
   { to: "contact", label: "Contact" },
 ];
 
@@ -28,9 +29,15 @@ const MobileNav = () => {
     <div className="mobile-nav-wrapper">
       <div className="mobile-nav-header">
         <div className="mobile-nav-title">Raju Yarragoti</div>
-        <div className="mobile-nav-icon" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="mobile-nav-icon"
+          onClick={toggleMenu}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+        >
           {open ? <AiOutlineClose size={30} /> : <GiHamburgerMenu size={30} />}
-        </div>
+        </button>
       </div>
 
       <div className={`mobile-nav-menu ${open ? "open" : ""}`}>

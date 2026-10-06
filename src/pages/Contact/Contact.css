@@ -104,3 +104,9 @@ textarea:focus {
     font-size: 0.9rem;
   }
 }
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
