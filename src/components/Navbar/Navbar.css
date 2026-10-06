@@ -58,33 +58,16 @@
 
 .theme-toggle {
   cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  display: flex;
 }
 
-/* Mobile */
-.mobile-menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background-color: inherit;
-  padding: 15px;
-}
-
-.mobile-menu li {
-  margin: 10px 0;
-}
-
+/* MobileNav takes over on small screens */
 @media (max-width: 768px) {
-  .navbar-menu {
+  .navbar {
     display: none;
-  }
-  .mobile-menu-icon {
-    display: block;
-  }
-  .mobile-menu {
-    display: flex;
   }
 }

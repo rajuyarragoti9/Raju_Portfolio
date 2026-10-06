@@ -1,4 +1,3 @@
-import "./App.css";
 import Layout from "./components/Layout/Layout";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";

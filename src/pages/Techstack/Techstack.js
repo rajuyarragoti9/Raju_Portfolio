@@ -22,7 +22,8 @@ const Techstack = () => {
     <div className="container techstack" id="techstack">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="header"
       >
@@ -40,7 +41,8 @@ const Techstack = () => {
         className="row"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
       >
         {TechStackList.map((tech) => (
           <motion.div

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1e2c"/><stop offset="1" stop-color="#2b2b40"/></linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.06"/></pattern>
+    <clipPath id="map"><rect x="110" y="90" width="640" height="495" rx="20"/></clipPath>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <!-- map -->
+  <g clip-path="url(#map)">
+    <rect x="110" y="90" width="640" height="495" fill="#e8efe9"/>
+    <rect x="140" y="120" width="160" height="150" rx="8" fill="#cfe3d3"/>
+    <rect x="590" y="400" width="150" height="160" rx="8" fill="#cfe3d3"/>
+    <path d="M110 330h640M110 490h640M340 90v495M570 90v495" stroke="#ffffff" stroke-width="26"/>
+    <path d="M110 200l640 330" stroke="#ffffff" stroke-width="14"/>
+    <path d="M640 90c-30 110 40 150 110 160" stroke="#a9d3f0" stroke-width="30" fill="none"/>
+    <!-- route -->
+    <path d="M200 490 L340 490 L340 330 L570 330 L570 200" fill="none" stroke="#138781" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- start -->
+    <circle cx="200" cy="490" r="16" fill="#138781"/><circle cx="200" cy="490" r="7" fill="#fff"/>
+    <!-- destination pin -->
+    <path d="M570 204c0 0-40-40-40-66a40 40 0 0 1 80 0c0 26-40 66-40 66z" fill="#f29f67"/>
+    <circle cx="570" cy="138" r="14" fill="#fff"/>
+    <!-- car on route -->
+    <g transform="translate(455 330)">
+      <rect x="-38" y="-22" width="76" height="44" rx="12" fill="#1e1e2c"/>
+      <rect x="8" y="-16" width="16" height="32" rx="4" fill="#9fd6d2"/>
+      <rect x="-26" y="-16" width="12" height="32" rx="4" fill="#9fd6d2"/>
+    </g>
+  </g>
+  <!-- phone -->
+  <rect x="800" y="70" width="290" height="540" rx="36" fill="#11111a"/>
+  <rect x="814" y="84" width="262" height="512" rx="26" fill="#ffffff"/>
+  <rect x="905" y="96" width="80" height="10" rx="5" fill="#11111a"/>
+  <text x="836" y="150" font-size="24" font-weight="700" fill="#1e1e2c">Your ride</text>
+  <text x="836" y="178" font-size="16" fill="#7a7a90">Arriving in 4 min</text>
+  <circle cx="866" cy="230" r="26" fill="#f29f67"/><circle cx="866" cy="222" r="9" fill="#fff"/><path d="M850 245a16 12 0 0 1 32 0z" fill="#fff"/>
+  <text x="904" y="225" font-size="18" font-weight="600" fill="#1e1e2c">Driver</text>
+  <text x="904" y="248" font-size="15" fill="#7a7a90">&#9733; 4.9 &#183; Sedan</text>
+  <line x1="836" y1="285" x2="1054" y2="285" stroke="#ececf2" stroke-width="2"/>
+  <circle cx="846" cy="320" r="7" fill="#138781"/><text x="866" y="326" font-size="16" fill="#1e1e2c">Pickup point</text>
+  <path d="M846 330v34" stroke="#c8c8d4" stroke-width="3" stroke-dasharray="4 4"/>
+  <circle cx="846" cy="374" r="7" fill="#f29f67"/><text x="866" y="380" font-size="16" fill="#1e1e2c">Destination</text>
+  <rect x="836" y="410" width="218" height="66" rx="12" fill="#f4f4f8"/>
+  <text x="852" y="438" font-size="14" fill="#7a7a90">Estimated fare</text>
+  <text x="852" y="464" font-size="22" font-weight="700" fill="#138781">&#8377;185</text>
+  <rect x="1004" y="424" width="36" height="34" rx="6" fill="none" stroke="#138781" stroke-width="2.5"/>
+  <path d="M1004 434h36" stroke="#138781" stroke-width="2.5"/>
+  <rect x="836" y="500" width="218" height="52" rx="14" fill="#1e1e2c"/>
+  <text x="945" y="533" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">Confirm Ride</text>
+  <!-- notification -->
+  <g transform="translate(560 30)">
+    <rect width="230" height="64" rx="14" fill="#f29f67"/>
+    <path d="M28 24a10 10 0 0 1 20 0v10l4 6H24l4-6z" fill="#fff"/><circle cx="38" cy="46" r="4" fill="#fff"/>
+    <text x="66" y="30" font-size="15" font-weight="700" fill="#fff">Driver is nearby</text>
+    <text x="66" y="50" font-size="13" fill="#fff">Real-time update</text>
+  </g>
+</svg>

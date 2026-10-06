@@ -9,7 +9,8 @@ const About = () => {
       className="about"
       id="about"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8 }}
     >
       <div className="row">

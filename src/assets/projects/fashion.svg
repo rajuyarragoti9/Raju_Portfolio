@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e1e2c"/><stop offset="1" stop-color="#2b2b40"/></linearGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.06"/></pattern>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#dots)"/>
+  <!-- code / API panel -->
+  <rect x="90" y="80" width="560" height="515" rx="18" fill="#14141f" stroke="#33334a" stroke-width="2"/>
+  <circle cx="122" cy="110" r="7" fill="#ff5f57"/><circle cx="145" cy="110" r="7" fill="#febc2e"/><circle cx="168" cy="110" r="7" fill="#28c840"/>
+  <g font-family="Consolas, Menlo, monospace" font-size="20">
+    <rect x="120" y="140" width="72" height="30" rx="6" fill="#138781"/>
+    <text x="156" y="161" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">GET</text>
+    <text x="205" y="162" fill="#e6e6f0">/api/products/search?q=shirt</text>
+    <text x="120" y="215" fill="#9a9ab0">{</text>
+    <text x="145" y="250" fill="#e6e6f0"><tspan fill="#f29f67">"name"</tspan>: <tspan fill="#7fd1c9">"Cotton T-Shirt"</tspan>,</text>
+    <text x="145" y="285" fill="#e6e6f0"><tspan fill="#f29f67">"category"</tspan>: <tspan fill="#7fd1c9">"men"</tspan>,</text>
+    <text x="145" y="320" fill="#e6e6f0"><tspan fill="#f29f67">"price"</tspan>: <tspan fill="#c9a0ff">799</tspan>,</text>
+    <text x="145" y="355" fill="#e6e6f0"><tspan fill="#f29f67">"recommended"</tspan>: [</text>
+    <text x="175" y="390" fill="#e6e6f0"><tspan fill="#7fd1c9">"Denim Jeans"</tspan>,</text>
+    <text x="175" y="425" fill="#7fd1c9">"White Sneakers"</text>
+    <text x="145" y="460" fill="#e6e6f0">]</text>
+    <text x="120" y="495" fill="#9a9ab0">}</text>
+    <rect x="120" y="530" width="72" height="30" rx="6" fill="#f29f67"/>
+    <text x="156" y="551" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">JWT</text>
+    <text x="205" y="552" font-size="17" fill="#9a9ab0">Authorization: Bearer eyJhbGci...</text>
+  </g>
+  <!-- product card -->
+  <rect x="700" y="80" width="400" height="330" rx="18" fill="#ffffff"/>
+  <rect x="725" y="105" width="350" height="200" rx="12" fill="#eaf4f3"/>
+  <!-- shirt -->
+  <path d="M845 135l-55 30 22 45 23-11v86h130v-86l23 11 22-45-55-30c-6 18-26 30-55 30s-49-12-55-30z" fill="#138781"/>
+  <path d="M845 135c6 18 26 30 55 30s49-12 55-30" fill="none" stroke="#0e6661" stroke-width="4"/>
+  <text x="725" y="345" font-size="22" font-weight="700" fill="#1e1e2c">Cotton T-Shirt</text>
+  <text x="725" y="382" font-size="22" font-weight="700" fill="#138781">&#8377;799</text>
+  <text x="1075" y="382" font-size="22" fill="#f29f67" text-anchor="end">&#9733;&#9733;&#9733;&#9733;&#9733;</text>
+  <!-- feature chips -->
+  <g font-size="17" font-weight="600">
+    <rect x="700" y="435" width="190" height="70" rx="14" fill="#2f2f45"/>
+    <circle cx="730" cy="470" r="14" fill="#f29f67"/><circle cx="730" cy="465" r="5" fill="#fff"/><path d="M721 478a9 7 0 0 1 18 0z" fill="#fff"/>
+    <text x="755" y="476" fill="#fff">User Logs</text>
+    <rect x="910" y="435" width="190" height="70" rx="14" fill="#2f2f45"/>
+    <circle cx="938" cy="468" r="9" fill="none" stroke="#7fd1c9" stroke-width="3.5"/><path d="M945 475l8 8" stroke="#7fd1c9" stroke-width="3.5" stroke-linecap="round"/>
+    <text x="965" y="476" fill="#fff">Search</text>
+    <rect x="700" y="525" width="400" height="70" rx="14" fill="#138781"/>
+    <text x="900" y="567" fill="#fff" text-anchor="middle">Node.js &#183; Express &#183; MongoDB &#183; JWT</text>
+  </g>
+</svg>

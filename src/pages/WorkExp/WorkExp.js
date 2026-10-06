@@ -1,5 +1,5 @@
 import React from "react";
-import { SiReact ,SiJirasoftware} from "react-icons/si";
+import { SiJirasoftware } from "react-icons/si";
 import { MdDeveloperMode } from "react-icons/md";
 
 import {
